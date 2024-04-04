@@ -11,6 +11,9 @@ som stor inspirasjon til hvordan oppgaven kunne løses, da jeg har hatt en del p
 OpenLibrary API-et det er linket til i oppgaveteksten. I tillegg til dette har jeg fått litt hjelp av
 medstudent Mia Wilhelmsen.*/
 
+/*Jeg startet prosjektet på nytt etter å ha stått fast veldig lenge, og har kopiert over en del
+kode fra det forrige prosjektet. Derfor har dette prosjektet ganske få commits.*/
+
 function App() {
   const [books, setBooks] = useState([]) /*Holder på en array med data fra API-kallet. */
   const [query, setQuery] = useState("james bond") /*Holder på søkeverdien, men har "james bond" som standardverdi når siden lastes inn */
