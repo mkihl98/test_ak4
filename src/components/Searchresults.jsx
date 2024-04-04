@@ -13,8 +13,6 @@ export default function Searchresults({books, setQuery}){
         setSearch(event.target.value) /*Legger til verdien i søkefeltet i useState-stringen.*/
     }
 
-    console.log("Sjekk", books)
-
     return(
         <>
             <form onSubmit={handleSubmit}>
