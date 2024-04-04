@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root{
+    --font: "Montserrat", sans-serif;
+    --black: #000;
+    --beige: #f4e6c2;
+    --white: #fff;
+    --orange: #ff9900;
+    --almost-white: #f7f4ed;
+}
+
+body{
+    font-family: var(--font);
+    background-color: var(--almost-white);
+
+    header{
+        h1{
+            color: var(--black);
+        }
+    }
+
+    main{
+        width: 100%;
+
+        form{
+            label{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                color: var(--black);
+                font-weight: 700;
+            }
+
+            #search{
+                padding: 0.2rem 1rem;
+                background-color: var(--beige);
+                color: var(--black);
+            }
+
+            input{
+                padding: 0.2rem 0.7rem;
+                margin: 0.2rem;
+                background-color: var(--beige);
+                color: var(--black);
+                cursor: pointer;
+            }
+        }
+
+        section{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1.5rem 0;
+
+            h2{
+                width: 100%;
+            }
+
+            article{
+                border: 0.1rem solid;
+                border-radius: 3%;
+                width: 400px;
+                margin: 0.6rem 0;
+                padding: 0 0.2rem 0.8rem 0.2rem;
+                background-color: var(--beige);
+                color: var(--black);
+
+                h3{
+                    height: 56px;
+                }
+
+                p{
+                    text-align: left;
+                    padding: 0 0 0 0.8rem;
+                }
+
+                button{
+                    background-color: var(--orange);
+                    color: var(--white);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

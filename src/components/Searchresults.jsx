@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Bookcard from "./Bookcard"
 
-export default function Searchresults({content, setQuery, setCurrentId}){
+export default function Searchresults({books, setQuery}){
     const [search, setSearch] = useState("")
 
     const handleSubmit = (e)=>{
@@ -13,22 +13,17 @@ export default function Searchresults({content, setQuery, setCurrentId}){
         setSearch(event.target.value)
     }
 
-    const handleClick = (id)=>{
-        setCurrentId(id)
-    }
-
-    console.log("S", content)
+    console.log("Sjekk", books)
 
     return(
         <>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="search">Søk etter bøker:</label>
                 <input type="text" id="search" placeholder="Skriv boktittel her" onChange={handleChange}></input>
-                <input type="submit" value="Søk"></input>
+                <input type="submit" value="Søk" disabled={search.length < 3}></input>
             </form>
             <section>
-                <h2>Søkeresultater</h2>
-                <Bookcard content={content}/>
+                <Bookcard books={books}/>
             </section>
         </>
     )

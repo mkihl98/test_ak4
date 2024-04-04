@@ -1,13 +1,14 @@
-export default function Bookcard({content}){
+export default function Bookcard({books}){
     return(
         <>
-        {content?.map(item =>
-            <article key={item.key}>
-                <h3>{item.title}</h3>
-                <p>Forfatter: {item.author_name}</p>
-                <p>Første publiseringsår: {item.first_publish_year}</p>
-                <p>Gjennomsnittlig rating: {item.ratings_average}</p>
-                <a href={`https://www.amazon.com/s?k=${item.id_amazon}`}><button>Sjekk boka på Amazon!</button></a>
+        {books?.map(book =>
+            <article key={book.key}>
+                <h3>{book.title}</h3>
+                <p>Forfatter: {book.author_name}</p>
+                <p>Første publiseringsår: {book.first_publish_year}</p>
+                <p>Gjennomsnittlig rating: {book.ratings_average}</p>
+                {/*Fått hjelp av medstudent Mia Wilhelmsen til å få amazon.com-linken til å funke bedre:*/}
+                <a href={book.id_amazon && book.id_amazon.length > 0 ? `https://www.amazon.com/s?k=${book.id_amazon[0]}` : `https://www.amazon.com`}><button>Sjekk boka på Amazon!</button></a>
             </article>
         )}
         </>
