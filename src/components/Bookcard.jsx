@@ -1,6 +1,7 @@
 export default function Bookcard({books}){
     return(
-        <>
+        <> {/*.map-er gjennom books-propen som holder på arrayen med API-data, og skriver
+        ut et artikkelkort med de forskjellige verdiene fra API-et som trengs i henhold til oppgaveteksten: */}
         {books?.map(book =>
             <article key={book.key}>
                 <h3>{book.title}</h3>
